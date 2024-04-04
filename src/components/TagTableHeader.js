@@ -10,6 +10,7 @@ const TagTableHeader = ({ onSort }) => {
       <TableRow>
         {["id", "name", "count"].map((field) => (
           <TableCell
+            sx={{ fontSize: "1.2rem", fontWeight: 700 }}
             key={field}
             style={{ cursor: "pointer" }}
             onClick={() => onSort(field)}
