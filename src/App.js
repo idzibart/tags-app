@@ -29,7 +29,9 @@ const App = () => {
         setError(null);
       } catch (err) {
         console.error(err);
-        setError("Błąd ładowania tagów. Wprowadzona liczba strony lub liczba tagów może być niepoprawna");
+        setError(
+          "Błąd ładowania tagów. Wprowadzona liczba strony lub liczba tagów może być niepoprawna"
+        );
       } finally {
         setLoading(false);
       }
@@ -49,8 +51,8 @@ const App = () => {
           ? -1
           : 1
         : a[field] > b[field]
-        ? -1
-        : 1;
+          ? -1
+          : 1;
     });
     setTags(sortedTags);
   };
@@ -61,7 +63,7 @@ const App = () => {
 
   return (
     <div>
-      <Typography variant="h5">List of Tags</Typography>
+      <Typography variant="h5">Lista tagów</Typography>
       <Navbar
         page={page}
         pageSize={pageSize}
